@@ -1,0 +1,37 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "url": "https://www.wealthfront.com/",
+  "description": "Wealthfront helps you build a free financial plan for the life you want and automate your investments at a low cost.",
+  "foundingDate": "2008",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Palo Alto",
+    "addressRegion": "CA",
+    "postalCode": "94301",
+    "streetAddress": "261 Hamilton Ave"
+  },
+  "founders": [
+    {
+      "name": "Andy Rachleff",
+      "givenName": "Andy",
+      "familyName": "Rachleff"
+    },
+    {
+      "name": "Dan Carroll",
+      "givenName": "Dan",
+      "familyName": "Carroll"
+    }
+  ],
+  "sameAs": [
+    "https://www.facebook.com/wealthfront",
+    "https://instagram.com/wealthfront/",
+    "https://www.linkedin.com/company/wealthfront-inc",
+    "https://www.youtube.com/user/wealthfrontvideos",
+    "https://twitter.com/Wealthfront",
+    "https://blog.wealthfront.com"
+  ],
+  "@id": "https://www.wealthfront.com/#organization",
+  "name": "Wealthfront",
+  "logo": "https://blog.wealthfront.com/wp-content/themes/polarisblog/images/wf_logo2x.png"
+}

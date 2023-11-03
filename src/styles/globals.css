@@ -6,4 +6,14 @@
 
 
 
-
+body{
+    background: #d1c1d3;
+}
+@layer components{
+    .bg-custom {
+        background-image: url('/images/your-image.jpg'); /* Replace 'your-image.jpg' with the actual image file name */
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      
+}
