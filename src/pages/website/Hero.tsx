@@ -7,7 +7,7 @@ type Props = {};
 
 const Hero = (props: Props) => {
   return (
-    <div className="py-4 px-12">
+    <div className="py-4 md:px-12">
       <div className="md:flex block md:flex-row items-start gap-x-4">
         {/* Content for larger screens (hidden on mobile and tablet) */}
         <div className="w-full md:w-4/12 hidden sm:hidden md:block">
