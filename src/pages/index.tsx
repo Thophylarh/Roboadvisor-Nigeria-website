@@ -6,6 +6,7 @@ import Custom from "./website/Custom";
 import Taxes from "./website/Taxes";
 import Fee from "./website/Fee";
 import Invest from "./website/Invest";
+import Footer from "@/components/footer/Footer";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <Custom />
       <Fee />
       <Invest/>
+      <Footer/>
     </div>
   );
 }

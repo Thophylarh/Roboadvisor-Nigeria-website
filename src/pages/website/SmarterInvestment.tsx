@@ -46,8 +46,8 @@ const SmarterInvestment = (props: Props) => {
           <div className="px-12 md:flex pt-[6rem] md:items-start md:justify-between block">
             <div className="">
               {smartData.map(({ id, title }) => (
-                <div className="flex items-center gap-x-4 mt-6" key={id}>
-                  <p> {title} </p>
+                <div className="flex items-center gap-x-4 mt-6 " key={id}>
+                  <p className="text-[#dadef1]"> {title} </p>
                   <div>
                     <MdOutlineHelp />
                   </div>

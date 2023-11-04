@@ -3,7 +3,18 @@
 @tailwind utilities;
 
 body {
-  background: linear-gradient(to bottom, #ecbaa3, #c0c5f0,#ecbaa3,#f7e9e2 );
+  background: linear-gradient(to bottom, #ecbaa3, #c0c5f0, #ecbaa3, #f7e9e2);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #230b59;
+}
+p {
+  color: #230b59;
 }
 @layer components {
   .risklevel-bg {

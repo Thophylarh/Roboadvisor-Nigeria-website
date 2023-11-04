@@ -1,0 +1,1 @@
+export {default as Whitelogo} from "./logo-white.svg"
