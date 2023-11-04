@@ -10,10 +10,10 @@ type Props = {};
 
 const Custom = (props: Props) => {
   return (
-    <div className="flex items-center justify-between flex-row-reverse">
-      <div className="w-4/12 animate__animated animate__fadeInUp ">
+    <div className="md:flex items-center justify-between flex-row-reverse md:px-0 px-4 md:space-y-0 space-y-8 md:py-0 py-8">
+      <div className="md:w-4/12 animate__animated animate__fadeInUp ">
         <div className="space-y-4">
-          <h4 className="text-6xl">
+          <h4 className="md:text-6xl text-4xl">
             You make it <br /> custom.We`ll do <br /> the rest.
           </h4>
           <p className="">
@@ -35,7 +35,7 @@ const Custom = (props: Props) => {
           <Image
             src={carImg}
             alt="phone-img"
-            className="relative w-[1200px]  h-[600px] object-fit"
+            className="relative md:w-[1200px] md:h-[600px] md:object-fit w[600px] h-[300px]"
           />
         </div>
         <div>
