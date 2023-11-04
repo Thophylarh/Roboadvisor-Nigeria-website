@@ -1,13 +1,9 @@
-/* @tailwind base; */
+@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@layer {
-  @tailwind base;
-}
-
 body {
-  background: #d1c1d3;
+  background: linear-gradient(to bottom, #ecbaa3, #c0c5f0,#ecbaa3,#f7e9e2 );
 }
 @layer components {
   .risklevel-bg {
@@ -16,5 +12,16 @@ body {
     background-size: cover;
     height: 20vh;
     background-repeat: no-repeat;
+  }
+  .progress-bar {
+    height: 10px;
+    background-color: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+
+  .progress {
+    height: 100%;
+    background-color: #007bff; /* Change to your desired color */
   }
 }

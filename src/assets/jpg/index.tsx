@@ -1,1 +1,1 @@
-export { default as PhoneImg } from "./phoneimg.jpg";
+export { default as carImg } from "./carlady-img.jpg";

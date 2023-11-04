@@ -42,7 +42,7 @@ const SmarterInvestment = (props: Props) => {
   return (
     <div className="">
       <div className="md:flex sm:block items-center gap-x-8 border-6 ">
-        <div className="bg-[#230b59] text-white md:w-8/12 md:h-[80vh] w-full ">
+        <div className="bg-[#230b59] text-white md:w-8/12 md:h-[80vh] w-full  ">
           <div className="px-12 md:flex pt-[6rem] md:items-start md:justify-between block">
             <div className="">
               {smartData.map(({ id, title }) => (
@@ -54,11 +54,11 @@ const SmarterInvestment = (props: Props) => {
                 </div>
               ))}
             </div>
-            <div className="md:h-[50vh] md:w-[90vh] h-[20vh]">
-              <BarChart  />
+            <div className="md:h-[50vh] md:w-[90vh] h-[24vh] md:mt-0 mt-6">
+              <BarChart />
             </div>
           </div>
-          <div className="flex items-center justify-between px-12">
+          <div className="md:flex items-center justify-between px-12 hidden">
             <div>
               <p>Real Estate</p>
               <p>Tips</p>
@@ -84,11 +84,11 @@ const SmarterInvestment = (props: Props) => {
             </div>
           </div>
         </div>
-        <div>
-          <h1 className="italics sm:text-2xl md:text-6xl">
+        <div className="md:p-0 p-4">
+          <h1 className="italics text-4xl md:text-6xl">
             Smarter <br /> investing <br /> brilliantly <br /> personalized.
           </h1>
-          <p className="py-8">
+          <p className="md:py-8 py-4">
             Just answer a few questions,and we`ll build you <br /> a
             personalized portfolio of low-cost index funds <br /> from up to 17
             global asset classes. Our software <br /> handles all the
