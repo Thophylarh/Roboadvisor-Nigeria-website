@@ -1,11 +1,14 @@
 import Image from "next/image";
 import logo from "../../assets/svgs/logo.svg";
 import Button from "../buttons";
-import { Menu } from "@mantine/core";
+import { Menu, MenuDropdown, MenuTarget } from "@mantine/core";
 import Link from "next/link";
 import hourglass from "../../assets/png/hourglass.png";
 import { useDisclosure } from "@mantine/hooks";
 import { Burger } from "@mantine/core";
+import { FaBars, FaTimes } from "react-icons/fa";
+import { useState } from "react";
+import { SideDrawer } from "../drawer/SideDrawer";
 
 const menuData = [
   {
@@ -26,17 +29,24 @@ const NavBar = () => {
   const handleClick = (e: any) => {
     e.preventDefault();
   };
+  const [isOpen, setIsOpen] = useState(false);
 
-  const [opened, { toggle }] = useDisclosure();
-  const label = opened ? "Close navigation" : "Open navigation";
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const [isDrawerOpen, setDrawerOpen] = useState(false);
+
+  const toggleDrawer = () => {
+    setDrawerOpen(!isDrawerOpen);
+  };
   return (
     <div className="p-4">
       <div className="flex items-center justify-between">
-       
         <div>
           <Image src={logo} alt="" />
         </div>
-        <div className="flex items-center gap-x-4">
+        <div className="md:flex items-center gap-x-4 hidden ">
           <Link href="#" onClick={handleClick}>
             Cash
           </Link>
@@ -90,6 +100,7 @@ const NavBar = () => {
              
             </Menu.Dropdown>
           </Menu> */}
+
           <Link href="!#" onClick={handleClick}>
             Stocks
           </Link>
@@ -97,7 +108,7 @@ const NavBar = () => {
             Learn
           </Link>
         </div>
-        <div className="flex items-center gap-x-4">
+        <div className="md:flex items-center gap-x-4 hidden">
           <Button className="border border-blue-600 text-blue-600 py-3 rounded-md px-6">
             Login
           </Button>
@@ -105,13 +116,19 @@ const NavBar = () => {
             Get Started
           </Button>
         </div>
+        <div className="md:hidden">
+          <div>
+            <button onClick={toggleDrawer}>
+              {isDrawerOpen ? <FaTimes /> : <FaBars />}
+            </button>
+            {isDrawerOpen && (
+              <div>
+                <SideDrawer isOpen={isDrawerOpen} closeDrawer={toggleDrawer} />
+              </div>
+            )}
+          </div>
+        </div>
       </div>
-      {/* <Burger
-          color="red"
-          opened={opened}
-          onClick={toggle}
-          aria-label={label}
-        /> */}
     </div>
   );
 };

@@ -1,21 +1,20 @@
-@tailwind base;
+/* @tailwind base; */
 @tailwind components;
 @tailwind utilities;
 
-
-
-
-
-body{
-    background: #d1c1d3;
+@layer {
+  @tailwind base;
 }
-@layer components{
-    .risklevel-bg {
-       border-radius: 50px;
-        background-image: url('../assets/jpg/risklevel-img.jpg'); /* Replace 'your-image.jpg' with the actual image file name */
-        background-size: cover;
-        height: 20vh;
-        background-repeat: no-repeat;
-      }
-      
+
+body {
+  background: #d1c1d3;
+}
+@layer components {
+  .risklevel-bg {
+    border-radius: 50px;
+    background-image: url("../assets/jpg/risklevel-img.jpg"); /* Replace 'your-image.jpg' with the actual image file name */
+    background-size: cover;
+    height: 20vh;
+    background-repeat: no-repeat;
+  }
 }

@@ -1,4 +1,4 @@
-import { PhoneImg } from "@/assets/jpg";
+import { PhoneImg } from "@/assets/png";
 import Button from "@/components/buttons";
 import Image from "next/image";
 import React from "react";
@@ -7,7 +7,7 @@ type Props = {};
 
 const Custom = (props: Props) => {
   return (
-    <div className="flex items-center">
+    <div className="flex items-center px-12">
       <div>
         <h4>
           You make it <br /> custom.We`ll do <br /> the rest.
@@ -17,7 +17,7 @@ const Custom = (props: Props) => {
           energy,tech,and crypto and we`ll handle the trades and <br />{" "}
           rebalance your portfolio for you. Or start with a portfolio <br />{" "}
           designed around your values with our{" "}
-          <span className="underline">Socially Responsible portfolio</span>. We
+          <span className="underline">Socially Responsible portfolio</span> <br/>. We
           make it easy and safe to customize by helping <br /> you see when your
           choices won`t be in line with your <br /> preferred risk level
         </p>
@@ -27,9 +27,13 @@ const Custom = (props: Props) => {
       </div>
       <div>
         <div>
-          <Image src={PhoneImg} alt="phone-img" className="h-[400px]" />
+          <Image src={PhoneImg} alt="phone-img" className="h-[600px] w-[330px]" />
         </div>
-        <div>cards</div>
+        <div>cards
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
       </div>
       <div>col3</div>
     </div>

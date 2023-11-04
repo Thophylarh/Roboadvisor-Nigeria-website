@@ -2,12 +2,21 @@ import Image from "next/image";
 import React from "react";
 import heroBg from "../../assets/png/hero-img.png";
 import Button from "@/components/buttons";
+import { Menu } from "@mantine/core";
 
 type Props = {};
 
 const Hero = (props: Props) => {
   return (
     <div className="py-4 md:px-12">
+       <Menu>
+            <Menu.Target>
+              <button>Hello World</button>
+            </Menu.Target>
+            <Menu.Dropdown>
+              <Menu.Item>Hello kal</Menu.Item>
+            </Menu.Dropdown>
+          </Menu>
       <div className="md:flex block md:flex-row items-start gap-x-4">
         {/* Content for larger screens (hidden on mobile and tablet) */}
         <div className="w-full md:w-4/12 hidden sm:hidden md:block">
