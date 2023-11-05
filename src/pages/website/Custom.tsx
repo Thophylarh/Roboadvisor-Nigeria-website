@@ -13,10 +13,10 @@ const Custom = (props: Props) => {
     <div className="md:flex items-center justify-between flex-row-reverse md:px-0 px-4 md:space-y-0 space-y-8 md:py-0 py-8">
       <div className="md:w-4/12 animate__animated animate__fadeInUp ">
         <div className="space-y-4">
-          <h4 className="md:text-6xl text-4xl">
+          <h4 className="md:text-6xl text-3xl">
             You make it <br /> custom.We`ll do <br /> the rest.
           </h4>
-          <p className="">
+          <p className="md:text-base text-sm">
             Choose from hundreds of funds in categories like clean <br />{" "}
             energy,tech,and crypto and we`ll handle the trades and <br />{" "}
             rebalance your portfolio for you. Or start with a portfolio <br />{" "}
@@ -25,7 +25,7 @@ const Custom = (props: Props) => {
             We make it easy and safe to customize by helping <br /> you see when
             your choices won`t be in line with your <br /> preferred risk level
           </p>
-          <Button className="bg-blue-600 text-white px-8 py-4 rounded-md">
+          <Button className="bg-blue-600 text-white px-4 md:px-8 py-2 md:py-4 rounded-md md:text-base text-sm">
             Get Started
           </Button>
         </div>

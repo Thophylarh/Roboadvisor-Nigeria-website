@@ -27,7 +27,7 @@ const Invest = (props: Props) => {
     <div className="p-20 relative">
       <div>
         <div className="md:flex items-start justify-between">
-          <h2 className="text-[1.3rem] md:text-[3rem] w-6/12">
+          <h2 className="text-[1.3rem] md:text-[3rem] w-6/12 ">
             Investing that accounts for your <br /> needs.
           </h2>
           <div className="w-4/12 ">
@@ -41,7 +41,7 @@ const Invest = (props: Props) => {
         <div className="border-b border-[#333] my-2 md:my-10"></div>
       </div>
       <div className="md:flex justify-between items-center">
-        <div className="space-y-6 w-6/12">
+        <div className="space-y-6 w-6/12 animate__animated animate__fadeInLeft">
           {investData.map(({ id, title, content }) => (
             <div key={id} className="">
               <h4 className="text-xl md:text-4xl font-bold">{title}</h4>
@@ -50,7 +50,7 @@ const Invest = (props: Props) => {
             </div>
           ))}
         </div>
-        <div className="w-6/12 space-y-4">
+        <div className="w-6/12 space-y-4 animate__animated animate__fadeInRight">
           <h4 className="text-xl md:text-4xl font-bold">
             {" "}
             Invest even faster <br /> with the Wealthfront <br /> Cash Account.
