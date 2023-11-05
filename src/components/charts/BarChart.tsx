@@ -84,7 +84,7 @@ const data = {
 };
 
 const BarChart = () => {
-  return <Bar options={options} data={data} />;
+  return <Bar options={options as any} data={data} />
 };
 
 export default BarChart;
