@@ -15,7 +15,7 @@ const Hero = (props: Props) => {
             There`s no secret to long-term wealth, but if there were it would be
             this:
           </p>
-          <p className="font-bold text-6xl">
+          <p className="font-bold text-6xl ">
             automated <br /> index <br /> investing
           </p>
           <p className="mt-6">
