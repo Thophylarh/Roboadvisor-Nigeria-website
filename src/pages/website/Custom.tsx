@@ -4,7 +4,6 @@ import Button from "@/components/buttons";
 import ProgressBar from "@/components/progressbar/ProgressBar";
 import Image from "next/image";
 import React from "react";
-import ReactPlayer from "react-player/lazy";
 
 type Props = {};
 

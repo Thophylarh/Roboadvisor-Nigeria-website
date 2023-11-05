@@ -1,9 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Metal+Mania&family=Poppins&family=Spectral:wght@400;600;700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+
+@font-face {
+  font-family: "Quiet-Sans";
+  src: url("../../public/fonts/Quiet-Sans.otf") format("opentype");
+}
 
 body {
   background: linear-gradient(to bottom, #ecbaa3, #c0c5f0, #ecbaa3, #f7e9e2);
+  font-family: "Quiet-Sans";
 }
 h1,
 h2,

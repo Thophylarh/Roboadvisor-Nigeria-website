@@ -11,7 +11,7 @@ const Hero = (props: Props) => {
     <div className="py-4 md:px-12">
       <div className="md:flex block md:flex-row items-start md:gap-x-4">
         <div className="w-full md:w-4/12 hidden md:block">
-          <p className="italic text-6xl">
+          <p className=" text-6xl font-Dancing_script ">
             There`s no secret to long-term wealth, but if there were it would be
             this:
           </p>
@@ -32,7 +32,7 @@ const Hero = (props: Props) => {
         {/* Image (visible on all screens) */}
         <div className="md:w-8/12 sm:w-screen ">
           <Image src={heroBg} alt="" className="object-fit bg-no-repeat" />
-          <div className="flex items-start gap-x-2 md:py-6 py-4 text-[8px] md:text-base md:px-0 px-4">
+          <div className="flex items-start gap-x-4 md:py-6 py-4 text-[8px] md:text-base md:px-0 px-4">
             <div>
               <h4 className="text-[10px] md:text-xl">
                 <span className="font-bold">N</span>nerdwallet{" "}
