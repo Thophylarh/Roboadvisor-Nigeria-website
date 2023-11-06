@@ -11,9 +11,13 @@
   font-family: "Quiet-Sans";
   src: url("../../public/fonts/Quiet-Sans.otf") format("opentype");
 }
+@font-face {
+  font-family: "Dancing Script";
+  src: url("../../public/fonts/static/DancingScript-Medium.ttf") format("opentype");
+}
 
 body {
-  background: linear-gradient(to bottom, #ecbaa3, #c0c5f0, #ecbaa3, #f7e9e2);
+  background: linear-gradient(to bottom, #ecbaa3, #c0c5f0, #ecbaa3);
   font-family: "Quiet-Sans";
 }
 h1,

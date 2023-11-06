@@ -2,7 +2,7 @@ import "@/styles/globals.css";
 import { MantineProvider, createTheme } from "@mantine/core";
 import type { AppProps } from "next/app";
 import { useEffect } from "react";
-
+import '@mantine/core/styles.css';
 
 const theme = createTheme({
   primaryColor: "blue",

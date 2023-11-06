@@ -9,7 +9,7 @@ const Taxes = (props: Props) => {
     <div className="h-[50vh] flex flex-col items-center justify-center md:px-0 px-4">
       <Animations>
         <div className="text-center space-y-6">
-          <h2 className="text-3xl md:text-5xl font-semibold">
+          <h2 className="text-3xl md:text-5xl italic font-serif">
             Let your taxes pay you for a change
           </h2>
           <div>

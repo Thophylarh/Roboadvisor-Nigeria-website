@@ -30,30 +30,37 @@ const labels = [
   "Dividend Stocks",
   "Municipal Bonds",
 ];
-const percentages = ["45%", "15%", "15%", "9%", "16%"];
-const shadesOfBlue = ["#3498db", "#2980b9", "#1f618d", "#154360", "#0e2e56"];
+const percentages = [39, 9, 9, 3, 35, 5];
+const shadesOfBlue = [
+  "#3498db",
+  "#4840bb",
+  "#4d5898",
+  "#bdc6f5",
+  "#0e2e56",
+  "#fed0b9",
+];
 
 export const options = {
+  indexAxis: "y" as const,
   responsive: true,
   scales: {
     x: {
       type: "category",
-      labels: labels,
+      labels: false,
       grid: {
         display: false,
       },
       ticks: {
-        color: "white",
+        display: false,
       },
     },
     y: {
-      //   beginAtZero: true,
+      // beginAtZero: true,
       grid: {
         display: false,
       },
       ticks: {
         display: false,
-        color: "white",
       },
     },
   },
@@ -74,8 +81,8 @@ const data = {
       fill: true,
       stepped: false,
       borderCurve: "smooth",
-      label: "Percentage Data",
-      data: percentages.map((percentage) => parseFloat(percentage)),
+      label: " Data",
+      data: percentages,
       borderColor: shadesOfBlue,
       backgroundColor: shadesOfBlue,
       tension: 0.4,
@@ -84,7 +91,7 @@ const data = {
 };
 
 const BarChart = () => {
-  return <Bar options={options as any} data={data} />
+  return <Bar options={options as any} data={data} />;
 };
 
 export default BarChart;

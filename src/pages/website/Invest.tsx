@@ -27,8 +27,8 @@ const Invest = (props: Props) => {
     <div className="p-20 relative">
       <div>
         <div className="md:flex items-start justify-between">
-          <h2 className="text-[1.3rem] md:text-[3rem] w-6/12 ">
-            Investing that accounts for your <br /> needs.
+          <h2 className="text-[1.3rem] md:text-[3rem] md:w-6/12 italic font-serif ">
+            Investing that accounts for your needs.
           </h2>
           <div className="w-4/12 ">
             <Image

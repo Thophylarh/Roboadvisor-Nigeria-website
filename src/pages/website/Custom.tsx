@@ -2,6 +2,7 @@ import { carImg } from "@/assets/jpg";
 import { PhoneImg } from "@/assets/png";
 import Button from "@/components/buttons";
 import ProgressBar from "@/components/progressbar/ProgressBar";
+import Animations from "@/components/utils/Animation";
 import Image from "next/image";
 import React from "react";
 
@@ -9,11 +10,11 @@ type Props = {};
 
 const Custom = (props: Props) => {
   return (
-    <div className="md:flex items-center justify-between flex-row-reverse md:px-0 px-4 md:space-y-0 space-y-8 md:py-0 py-8">
-      <div className="md:w-4/12 animate__animated animate__fadeInUp ">
+    <div className="md:flex items-center justify-between flex-row-reverse md:px-0 px-4 md:space-y-0 space-y-8 md:py-0 py-8 relative">
+      <div className="md:w-4/12 animate__animated animate__fadeInUp px-4">
         <div className="space-y-4">
-          <h4 className="md:text-6xl text-3xl">
-            You make it <br /> custom.We`ll do <br /> the rest.
+          <h4 className="md:text-6xl text-3xl italic font-serif">
+            You make it custom. We`ll do the rest.
           </h4>
           <p className="md:text-base text-sm">
             Choose from hundreds of funds in categories like clean <br />{" "}
@@ -24,13 +25,13 @@ const Custom = (props: Props) => {
             We make it easy and safe to customize by helping <br /> you see when
             your choices won`t be in line with your <br /> preferred risk level
           </p>
-          <Button className="bg-blue-600 text-white px-4 md:px-8 py-2 md:py-4 rounded-md md:text-base text-sm">
+          <Button className="bg-[#230b59] text-white px-4 md:px-8 py-2 md:py-4 rounded-md md:text-base text-sm">
             Get Started
           </Button>
         </div>
       </div>
       <div>
-        <div className="relative w-8/12 animate__animated animate__fadeInUp">
+        <div className=" w-8/12 animate__animated animate__fadeInUp">
           <Image
             src={carImg}
             alt="phone-img"
@@ -38,27 +39,39 @@ const Custom = (props: Props) => {
           />
         </div>
         <div>
-          {/* <div className="">
-            <div className="bg-white shadow-sm rounded-md w-[120] h-[70px] p-4 absolute -bottom-[175%] left-[50%] space-y-2 animate__animated animate__fadeInUp  animate__delay-2s">
-              <div className="flex items-center  gap-x-10">
-                <p>US Direct Indexing</p>
-                <p>15%</p>
+          <div className="">
+            <div className="bg-white shadow-sm rounded-md md:w-[300px] md:h-[100px] h-[60px] md:p-4 p-2 absolute md:top-[45%] md:left-[40%] bottom-[18%] left-[40%] animate__animated animate__fadeInUp animate__delay-3s space-y-2 ">
+              <div className="">
+                <div className="flex items-center justify-between md:text-sm text-[12px]">
+                  <p>Emerging Markets</p>
+                  <p>now</p>
+                </div>
+                <p className="md:text-sm text-[14px]">
+                  {" "}
+                  We automatically invested your $500
+                </p>
               </div>
-              <div>
-                <ProgressBar percentage={15} />
+              <div className="md:blocck hidden  ">
+                <ProgressBar percentage={10} />
               </div>
             </div>
           </div>
 
-          <div className="bg-white shadow-sm rounded-md w-[120] h-[70px] p-4 absolute -bottom-[190%] left-[45%] animate__animated animate__fadeInUp animate__delay-3s space-y-2 ">
-            <div className="flex items-center gap-x-10">
-              <p>Emerging Markets</p>
-              <p>10%</p>
+          <div className="bg-white shadow-sm rounded-md md:w-[300px] md:h-[100px] h-[60px] md:p-4 p-2 absolute md:top-[45%] md:left-[40%] bottom-[32%] left-[37%] animate__animated animate__fadeInUp animate__delay-3s space-y-2 ">
+            <div className="">
+              <div className="flex items-center justify-between md:text-sm text-[12px]">
+                <p>Emerging Markets</p>
+                <p>now</p>
+              </div>
+              <p className="md:text-sm text-[14px]">
+                {" "}
+                We saved you $78.11 on your taxes
+              </p>
             </div>
-            <div>
+            <div className="md:blocck hidden ">
               <ProgressBar percentage={10} />
             </div>
-          </div> */}
+          </div>
         </div>
       </div>
     </div>

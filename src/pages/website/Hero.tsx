@@ -11,11 +11,11 @@ const Hero = (props: Props) => {
     <div className="py-4 md:px-12">
       <div className="md:flex block md:flex-row items-start md:gap-x-4">
         <div className="w-full md:w-4/12 hidden md:block">
-          <p className=" text-6xl font-Dancing_script ">
+          <p className=" text-7xl font-Dancing_script ">
             There`s no secret to long-term wealth, but if there were it would be
             this:
           </p>
-          <p className="font-bold text-6xl ">
+          <p className="font-bold text-6xl font-sans  ">
             automated <br /> index <br /> investing
           </p>
           <p className="mt-6">
