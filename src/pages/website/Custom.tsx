@@ -10,7 +10,7 @@ type Props = {};
 
 const Custom = (props: Props) => {
   return (
-    <div className="md:flex items-center justify-between flex-row-reverse md:px-0 px-4 md:space-y-0 space-y-8 md:py-0 py-8 relative">
+    <div className="md:flex items-center justify-between flex-row-reverse md:px-0 px-0 md:space-y-0 space-y-8 md:py-0 py-8 relative">
       <div className="md:w-4/12 animate__animated animate__fadeInUp px-4">
         <div className="space-y-4">
           <h4 className="md:text-6xl text-3xl italic font-serif">
@@ -35,12 +35,12 @@ const Custom = (props: Props) => {
           <Image
             src={carImg}
             alt="phone-img"
-            className="relative md:w-[1200px] md:h-[600px] md:object-fit w[600px] h-[300px]"
+            className="relative md:w-[1200px] md:h-[600px] md:object-fit w[600px] h-[300px] md:px-0 px-4"
           />
         </div>
         <div>
           <div className="">
-            <div className="bg-white shadow-sm rounded-md md:w-[300px] md:h-[100px] h-[60px] md:p-4 p-2 absolute md:top-[45%] md:left-[40%] bottom-[18%] left-[40%] animate__animated animate__fadeInUp animate__delay-3s space-y-2 ">
+            <div className="bg-white shadow-sm rounded-md md:w-[300px] md:h-[100px] h-[60px] md:p-4 p-2 absolute md:top-[20%] md:left-[40%] bottom-[18%] left-[40%] animate__animated animate__fadeInUp animate__delay-3s space-y-2 ">
               <div className="">
                 <div className="flex items-center justify-between md:text-sm text-[12px]">
                   <p>Emerging Markets</p>
@@ -51,24 +51,23 @@ const Custom = (props: Props) => {
                   We automatically invested your $500
                 </p>
               </div>
-              <div className="md:blocck hidden  ">
+              <div className="md:block hidden  ">
                 <ProgressBar percentage={10} />
               </div>
             </div>
           </div>
 
-          <div className="bg-white shadow-sm rounded-md md:w-[300px] md:h-[100px] h-[60px] md:p-4 p-2 absolute md:top-[45%] md:left-[40%] bottom-[32%] left-[37%] animate__animated animate__fadeInUp animate__delay-3s space-y-2 ">
+          <div className="bg-white shadow-sm rounded-md md:w-[300px] md:h-[100px] h-[60px] md:p-4 p-2 absolute md:top-[45%] md:left-[45%] bottom-[32%] left-[37%] animate__animated animate__fadeInUp animate__delay-3s space-y-2 ">
             <div className="">
               <div className="flex items-center justify-between md:text-sm text-[12px]">
                 <p>Emerging Markets</p>
                 <p>now</p>
               </div>
               <p className="md:text-sm text-[14px]">
-                {" "}
                 We saved you $78.11 on your taxes
               </p>
             </div>
-            <div className="md:blocck hidden ">
+            <div className="md:block hidden ">
               <ProgressBar percentage={10} />
             </div>
           </div>

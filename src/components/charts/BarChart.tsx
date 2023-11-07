@@ -23,74 +23,81 @@ ChartJS.register(
   Legend
 );
 
-const labels = [
-  "US Stocks",
-  "Foreign Stocks",
-  "Emerging Markets",
-  "Dividend Stocks",
-  "Municipal Bonds",
-];
-const percentages = [39, 9, 9, 3, 35, 5];
-const shadesOfBlue = [
-  "#3498db",
-  "#4840bb",
-  "#4d5898",
-  "#bdc6f5",
-  "#0e2e56",
-  "#fed0b9",
-];
-
-export const options = {
-  indexAxis: "y" as const,
-  responsive: true,
-  scales: {
-    x: {
-      type: "category",
-      labels: false,
-      grid: {
-        display: false,
-      },
-      ticks: {
-        display: false,
-      },
-    },
-    y: {
-      // beginAtZero: true,
-      grid: {
-        display: false,
-      },
-      ticks: {
-        display: false,
-      },
-    },
-  },
-  plugins: {
-    legend: {
-      display: false,
-    },
-    title: {
-      display: false,
-    },
-  },
+type Props = {
+  graphData: number[];
 };
 
-const data = {
-  labels: labels,
-  datasets: [
-    {
-      fill: true,
-      stepped: false,
-      borderCurve: "smooth",
-      label: " Data",
-      data: percentages,
-      borderColor: shadesOfBlue,
-      backgroundColor: shadesOfBlue,
-      tension: 0.4,
+const BarChart = ({ graphData }: Props) => {
+  const options = {
+    indexAxis: "y" as const,
+    responsive: true,
+    scales: {
+      x: {
+        type: "category",
+        labels: false,
+        grid: {
+          display: false,
+        },
+        ticks: {
+          display: false,
+        },
+      },
+      y: {
+        grid: {
+          display: false,
+        },
+        ticks: {
+          display: false,
+        },
+      },
     },
-  ],
-};
+    plugins: {
+      legend: {
+        display: false,
+      },
+      title: {
+        display: false,
+      },
+    },
+  };
 
-const BarChart = () => {
+  const data = {
+    labels: [
+      "US Stocks",
+      "Foreign Stocks",
+      "Emerging Markets",
+      "Dividend Stocks",
+      "Municipal Bonds",
+      "Tips"
+    ],
+    datasets: [
+      {
+        fill: true,
+        stepped: false,
+        borderCurve: "smooth",
+        label: "Data",
+        data: graphData,
+        borderColor: [
+          "#3498db",
+          "#4840bb",
+          "#4d5898",
+          "#bdc6f5",
+          "#0e2e56",
+          "#fed0b9",
+        ],
+        backgroundColor: [
+          "#3498db",
+          "#4840bb",
+          "#4d5898",
+          "#bdc6f5",
+          "#0e2e56",
+          "#fed0b9",
+        ],
+        tension: 0.4,
+      },
+    ],
+  };
+
   return <Bar options={options as any} data={data} />;
 };
 

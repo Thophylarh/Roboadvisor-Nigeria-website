@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import { Progress, Slider } from "@mantine/core";
 import { MdOutlineHelp } from "react-icons/md";
 import Button from "@/components/buttons";
@@ -39,12 +39,31 @@ const smartData = [
 ];
 
 const SmarterInvestment = (props: Props) => {
-  const [value, setValue] = useState(40);
+  const [value, setValue] = useState<number>(40);
+  const [graphData, setGraphData] = useState<number[]>([
+    20, 40, 35, 60, 80, 12,
+  ]);
+
+  const handleChange = (v: number) => {
+    setValue(v);
+  };
+
+  const generateGraphData = useMemo(() => {
+    const randomNumbers: number[] = [];
+
+    for (let i = 0; i < 6; i++) {
+      const randomNumber = Math.floor(Math.random() * 100) + 1;
+      randomNumbers.push(randomNumber);
+    }
+
+    return randomNumbers;
+  }, []);
+
   return (
     <div className="md:py-6 py-10">
       <div className="md:flex sm:block items-center gap-x-8 ">
         <div className="bg-[#230b59] text-white md:w-8/12 h-auto w-full  animate__animated animate__fadeInLeft relative">
-          <div className=" p-4  bg-white md:w-[420px] w-[300px] rounded-md mx-4 px-2 -top-12 md:left-[25%] left-[10%] absolute ">
+          <div className="p-4 bg-white md:w-[420px] w-[300px] rounded-md mx-4 px-2 -top-12 md:left-[25%] left-[10%] absolute ">
             <div className="flex items-center justify-between my-2">
               <h5 className="font-semibold md:text-xl text-base ">
                 Risk score:{value}
@@ -53,7 +72,7 @@ const SmarterInvestment = (props: Props) => {
             </div>
             <Slider
               value={value}
-              onChange={setValue}
+              onChange={(v: number) => handleChange(v)}
               className="md:w-[400px]"
             />
           </div>
@@ -61,13 +80,13 @@ const SmarterInvestment = (props: Props) => {
             <div className="">
               {smartData.map(({ id, title, icon }) => (
                 <div className="flex items-center gap-x-4 mt-4 " key={id}>
-                  <p className="text-[#dadef1] md:text-base text-sm"> {title} </p>
-                  <div >{icon}</div>
+                  <p className="text-[#dadef1] md:text-base text-sm">{title}</p>
+                  <div>{icon}</div>
                 </div>
               ))}
             </div>
-            <div className="md:h-[50vh] md:w-[90] h-full w-full md:mt-0 mt-6  " >
-            <BarChart />
+            <div className="md:h-[50vh] md:w-[90] h-full w-full md:mt-0 mt-6  ">
+              <BarChart graphData={generateGraphData} />
             </div>
           </div>
           <div className="md:flex items-center justify-between px-12 hidden">

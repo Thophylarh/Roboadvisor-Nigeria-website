@@ -24,7 +24,7 @@ const investData = [
 
 const Invest = (props: Props) => {
   return (
-    <div className="p-20 relative">
+    <div className="md:p-20 relative p-4">
       <div>
         <div className="md:flex items-start justify-between">
           <h2 className="text-[1.3rem] md:text-[3rem] md:w-6/12 italic font-serif ">

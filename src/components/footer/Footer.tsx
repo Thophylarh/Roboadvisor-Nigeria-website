@@ -6,7 +6,7 @@ type Props = {};
 
 const Footer = (props: Props) => {
   return (
-    <div className="p-20 bg-[#18172b] h-[100vh] md:h-[50vh]">
+    <div className="md:p-20 bg-[#18172b] h-[100vh] md:h-[50vh] p-4">
       <div className="grid grid-cols-1 md:grid-cols-5 cursor-pointer">
         <div>
           <Image src={Whitelogo} alt="logo" />
