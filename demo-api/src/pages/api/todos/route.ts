@@ -4,7 +4,7 @@ const DATA_SOURCE_URL = "https://jsonplaceholder.typicode.com/todos";
 
 const API_KEY: string = process.env.DATA_API_KEY as string;
 
-export default async function GET(req, res) {
+export default async function GET( req:any,res:any) {
   const data = await fetch(DATA_SOURCE_URL);
 
   const todos: Todo[] = await data.json();
