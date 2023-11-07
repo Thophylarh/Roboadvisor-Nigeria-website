@@ -40,13 +40,13 @@ const Custom = (props: Props) => {
         </div>
         <div>
           <div className="">
-            <div className="bg-white shadow-sm rounded-md md:w-[300px] md:h-[100px] h-[60px] md:p-4 p-2 absolute md:top-[20%] md:left-[40%] bottom-[18%] left-[40%] animate__animated animate__fadeInUp animate__delay-3s space-y-2 ">
+            <div className="bg-white shadow-sm rounded-md md:w-[300px] md:h-[100px] h-[56px]  md:p-4 p-2 absolute md:top-[20%] md:left-[40%] bottom-[18%] left-[43%] animate__animated animate__fadeInUp animate__delay-3s space-y-2 ">
               <div className="">
-                <div className="flex items-center justify-between md:text-sm text-[12px]">
+                <div className="flex items-center justify-between md:text-sm text-[9px]">
                   <p>Emerging Markets</p>
                   <p>now</p>
                 </div>
-                <p className="md:text-sm text-[14px]">
+                <p className="md:text-sm text-[12px]">
                   {" "}
                   We automatically invested your $500
                 </p>
@@ -57,13 +57,13 @@ const Custom = (props: Props) => {
             </div>
           </div>
 
-          <div className="bg-white shadow-sm rounded-md md:w-[300px] md:h-[100px] h-[60px] md:p-4 p-2 absolute md:top-[45%] md:left-[45%] bottom-[32%] left-[37%] animate__animated animate__fadeInUp animate__delay-3s space-y-2 ">
+          <div className="bg-white shadow-sm rounded-md md:w-[300px] md:h-[100px] h-[54px] md:p-4 p-2 absolute md:top-[45%] md:left-[45%] bottom-[32%] left-[37%] animate__animated animate__fadeInUp animate__delay-3s space-y-2 ">
             <div className="">
-              <div className="flex items-center justify-between md:text-sm text-[12px]">
+              <div className="flex items-center justify-between md:text-sm text-[9px]">
                 <p>Emerging Markets</p>
                 <p>now</p>
               </div>
-              <p className="md:text-sm text-[14px]">
+              <p className="md:text-sm text-[12px]">
                 We saved you $78.11 on your taxes
               </p>
             </div>

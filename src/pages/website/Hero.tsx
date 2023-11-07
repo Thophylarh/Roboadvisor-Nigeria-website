@@ -53,10 +53,10 @@ const Hero = (props: Props) => {
           <p className="font-bold md:text-6xl font-sans text-4xl  ">
             automated <br /> index <br /> investing
           </p>
-          <p className="mt-6">
-            Even with the inevitable ups and downs of the market, our <br />{" "}
-            expert-built, globally-diversified Automated Investing <br />{" "}
-            Account makes it easy to start building long-term wealth by <br />{" "}
+          <p className="mt-6 md:text-base text-sm md:w-[400px] w-[300px]">
+            Even with the inevitable ups and downs of the market, our 
+            expert-built, globally-diversified Automated Investing 
+            Account makes it easy to start building long-term wealth by 
             managing your risk, maximizing returns, and minimizing taxes
           </p>
           <Button className="text-white bg-[#230b59] py-2 md:py-3 px-4 md:px-6 rounded-md mt-4 md:text-base sm:text-xs ">

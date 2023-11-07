@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+import React, { useCallback, useState } from "react";
 import { Progress, Slider } from "@mantine/core";
 import { MdOutlineHelp } from "react-icons/md";
 import Button from "@/components/buttons";
@@ -40,18 +40,11 @@ const smartData = [
 
 const SmarterInvestment = (props: Props) => {
   const [value, setValue] = useState<number>(40);
-  const [graphData, setGraphData] = useState<number[]>([
-    20, 40, 35, 60, 80, 12,
-  ]);
 
-  const handleChange = (v: number) => {
-    setValue(v);
-  };
+  const generateRandomNumberArray = useCallback((length: number) => {
+    const randomNumbers: any[] = [];
 
-  const generateGraphData = useMemo(() => {
-    const randomNumbers: number[] = [];
-
-    for (let i = 0; i < 6; i++) {
+    for (let i = 0; i < length; i++) {
       const randomNumber = Math.floor(Math.random() * 100) + 1;
       randomNumbers.push(randomNumber);
     }
@@ -72,11 +65,11 @@ const SmarterInvestment = (props: Props) => {
             </div>
             <Slider
               value={value}
-              onChange={(v: number) => handleChange(v)}
+              onChange={setValue}
               className="md:w-[400px]"
             />
           </div>
-          <div className="px-12 md:flex pt-[3rem] md:items-center md:justify-between ">
+          <div className="px-12 md:flex pt-[3rem] md:items-center md:justify-between">
             <div className="">
               {smartData.map(({ id, title, icon }) => (
                 <div className="flex items-center gap-x-4 mt-4 " key={id}>
@@ -85,8 +78,8 @@ const SmarterInvestment = (props: Props) => {
                 </div>
               ))}
             </div>
-            <div className="md:h-[50vh] md:w-[90] h-full w-full md:mt-0 mt-6  ">
-              <BarChart graphData={generateGraphData} />
+            <div className="md:h-[50vh] md:w-[90] h-full w-full md:mt-0 mt-6 border">
+              <BarChart graphData={generateRandomNumberArray(6)} />
             </div>
           </div>
           <div className="md:flex items-center justify-between px-12 hidden">

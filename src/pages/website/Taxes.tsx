@@ -17,17 +17,17 @@ const Taxes = (props: Props) => {
               Tax-Loss Harvesting can find many small wins to boost your
               after-tax returns
             </h4>
-            <p className="md:text-base text-sm">
+            <p className="md:text-base text-sm w-[350px] md:w-[800px]">
               Our software monitors your investment to automatically trade
-              similar assets that lose value, which <br /> can help you lower
+              similar assets that lose value, which  can help you lower
               your tax bill while still keeping your portfolio on track. When
-              you offset your <br /> capital gains by claiming many small
-              losses, you can put the savings right back to work in the <br />{" "}
+              you offset your capital gains by claiming many small
+              losses, you can put the savings right back to work in the 
               market. No tractors or shovels required.
             </p>
           </div>
           <div>
-            <Button className="border border-blue-600 text-blue-600 py-2 px-4 md:px-6 rounded-md md:text-base text-sm">
+            <Button className="border border-[#230b59] text-[#230b59] py-2 px-4 md:px-6 rounded-md md:text-base text-sm">
               Learn more
             </Button>
           </div>
