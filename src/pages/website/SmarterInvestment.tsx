@@ -69,7 +69,7 @@ const SmarterInvestment = (props: Props) => {
               className="md:w-[400px]"
             />
           </div>
-          <div className="px-12 md:flex pt-[3rem] md:items-center md:justify-between">
+          <div className="px-12 md:flex pt-[3rem] md:items-center gap-x-10">
             <div className="">
               {smartData.map(({ id, title, icon }) => (
                 <div className="flex items-center gap-x-4 mt-4 " key={id}>
@@ -78,7 +78,7 @@ const SmarterInvestment = (props: Props) => {
                 </div>
               ))}
             </div>
-            <div className="md:h-[50vh] md:w-[90] h-full w-full md:mt-0 mt-6 border">
+            <div className=" h-full w-full md:mt-0 mt-6 ">
               <BarChart graphData={generateRandomNumberArray(6)} />
             </div>
           </div>

@@ -46,7 +46,7 @@ const Hero = (props: Props) => {
           </div>
         </div>
         <div className="w-full md:w-4/12  md:block md:px-0 px-4 md:py-0 py-8">
-          <p className=" text-5xl md:text-7xl font-Dancing_script ">
+          <p className=" text-5xl md:text-7xl font-serif italic ">
             There`s no secret to long-term wealth, but if there were it would be
             this:
           </p>

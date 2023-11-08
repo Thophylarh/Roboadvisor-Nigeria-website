@@ -38,10 +38,16 @@ const options = {
     x: {
       grid: { display: false, drawBorder: false, lineThickness: 0 },
       gridLine: { drawBorder: false },
+      ticks: {
+        display: false,
+      },
     },
     y: {
       grid: { display: false, drawBorder: false, lineThickness: 0 },
       gridLine: { drawBorder: false },
+      ticks: {
+        display: false, 
+      },
     },
   },
 };

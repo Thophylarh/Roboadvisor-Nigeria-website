@@ -9,6 +9,8 @@ import { Burger } from "@mantine/core";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { useState } from "react";
 import { SideDrawer } from "../drawer/SideDrawer";
+import { BsArrowUpRight } from "react-icons/bs";
+import { PiCaretUpBold } from "react-icons/pi";
 
 const menuData = [
   {
@@ -46,60 +48,73 @@ const NavBar = () => {
         <div>
           <Image src={logo} alt="" />
         </div>
-        <div className="md:flex items-center gap-x-4 hidden ">
+        <div className="md:flex items-center gap-x-4 hidden text-[#230b59]">
           <Link href="#" onClick={handleClick}>
             Cash
           </Link>
           <Link href="!#" onClick={handleClick}>
             Bonds
           </Link>
-          <Link href="!#" onClick={handleClick}>
-            Automated Investment
-          </Link>
 
-          {/* <Menu
-            trigger="click"
+          <Menu
+            trigger="hover"
             openDelay={100}
             closeDelay={400}
-            shadow="lg"
-            width={800}
+            shadow="md"
+            width={400}
             arrowPosition="center"
+            withArrow
           >
             <Menu.Target>
-              <Link href="!#" onClick={handleClick}>
+              <Link
+                href="!#"
+                onClick={handleClick}
+                className="hover:underline flex items-center "
+              >
                 Automated Investing
+                <div></div>
               </Link>
             </Menu.Target>
 
             <Menu.Dropdown>
               <Menu.Item>
-                <div className="flex items-center gap-x-2">
-                  <div className="w-8/12 ">
-                    <div className="flex items-center gap-x-4">
-                      <Image src={hourglass} alt="" className="w-20 h-20" />
-                      <div className="">
-                        Automated Index Investing
-                        <p>icon</p>
-                        <p>
-                          We`ll build and manage a diversified <br /> portfolio
-                          of low-cost index funds <br /> personified for you
+                <div className="flex items-center flex-col ">
+                  <div className="w-full ">
+                    <div className="flex items-center gap-x-2 py-10">
+                      <Image src={hourglass} alt="" className="w-24 h-24" />
+                      <div className=" space-y-2">
+                        <div className="flex items-center gap-x-1">
+                          <h4 className="font-sans italic text-lg font-semibold hover:border-b-2 hover:border-[#230b59]">
+                            Automated Index Investing
+                          </h4>
+
+                          <div>
+                            <BsArrowUpRight />
+                          </div>
+                        </div>
+
+                        <p className="w-[250px]">
+                          We`ll build and manage a diversified portfolio of
+                          low-cost index funds personified for you
+                        </p>
+                        <div className="border-b border-[#230b59] w-[150px] pt-2"></div>
+                        <p className="font-[600] pt-2">
+                          Explore all investment
                         </p>
                       </div>
                     </div>
                   </div>
-                  <div className="w-4/12 ">
+                  {/* <div className="w-4/12 bg-[#f3f4f6] h-full">
                     {menuData.map(({ id, title }) => (
                       <ul key={id} className="my-2">
                         <li>{title}</li>
                       </ul>
                     ))}
-                  </div>
+                  </div> */}
                 </div>
               </Menu.Item>
-
-             
             </Menu.Dropdown>
-          </Menu> */}
+          </Menu>
 
           <Link href="!#" onClick={handleClick}>
             Stocks
@@ -109,10 +124,10 @@ const NavBar = () => {
           </Link>
         </div>
         <div className="md:flex items-center gap-x-4 hidden">
-          <Button className="border border-blue-600 text-blue-600 py-3 rounded-md px-6">
+          <Button className="border border-[#230b59] text-[#230b59] py-2 rounded-md px-4">
             Login
           </Button>
-          <Button className="bg-blue-600 py-3 rounded-md text-white px-4">
+          <Button className="bg-[#230b59] py-2 rounded-md text-white px-3">
             Get Started
           </Button>
         </div>

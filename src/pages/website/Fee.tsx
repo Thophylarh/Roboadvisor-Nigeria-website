@@ -10,10 +10,10 @@ const Fee = (props: Props) => {
       <Animations>
         <div className="text-center space-y-6 animate__animated animate__fadeInUp">
           <div className="space-y-2">
-            <h2 className="text-xl md:text-6xl font-medium font-serif italic text-[#dadef1] ">
+            <h2 className="text-xl md:text-6xl font-medium font-sans text-[#dadef1] ">
               Our fee is small,{" "}
             </h2>
-            <p className="font-Dancing_script text-xl md:text-6xl font-medium  text-[#dadef1]">
+            <p className="font-serif italic text-xl md:text-6xl font-medium  text-[#dadef1]">
               but we think its`s a really big deal.
             </p>
           </div>
