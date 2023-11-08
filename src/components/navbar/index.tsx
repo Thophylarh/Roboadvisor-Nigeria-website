@@ -10,20 +10,37 @@ import { FaBars, FaTimes } from "react-icons/fa";
 import { useState } from "react";
 import { SideDrawer } from "../drawer/SideDrawer";
 import { BsArrowUpRight } from "react-icons/bs";
-import { PiCaretUpBold } from "react-icons/pi";
+import { MdOutlineHelpOutline } from "react-icons/md";
+import { MdOutlinePriceChange } from "react-icons/md";
+import { TbReceiptTax } from "react-icons/tb";
+import { GrDocumentPerformance } from "react-icons/gr";
+import { MdRateReview } from "react-icons/md";
 
-const menuData = [
+const learnData = [
   {
     id: 0,
-    title: "Socially Responsible(SRI)",
+    icon: <MdOutlineHelpOutline size={20} />,
+    title: "Help Center",
   },
   {
     id: 1,
-    title: "Retirement(IRAs)",
+    title: "Pricing",
+    icon: <MdOutlinePriceChange size={20} />,
   },
   {
     id: 2,
-    title: "College(529s)",
+    title: "Tax-Loss Harvesting",
+    icon: <TbReceiptTax size={20} />,
+  },
+  {
+    id: 3,
+    title: "Historical Performance",
+    icon: <GrDocumentPerformance size={20} />,
+  },
+  {
+    id: 4,
+    title: "Review",
+    icon: <MdRateReview size={20} />,
   },
 ];
 
@@ -48,7 +65,7 @@ const NavBar = () => {
         <div>
           <Image src={logo} alt="" />
         </div>
-        <div className="md:flex items-center gap-x-4 hidden text-[#230b59]">
+        <div className="md:flex items-center gap-x-4 hidden text-[#230b59] font-[600]">
           <Link href="#" onClick={handleClick}>
             Cash
           </Link>
@@ -69,10 +86,10 @@ const NavBar = () => {
               <Link
                 href="!#"
                 onClick={handleClick}
-                className="hover:underline flex items-center "
+                className=" hover:border-b-2 hover:border-[#230b59] "
               >
                 Automated Investing
-                <div></div>
+              
               </Link>
             </Menu.Target>
 
@@ -81,7 +98,11 @@ const NavBar = () => {
                 <div className="flex items-center flex-col ">
                   <div className="w-full ">
                     <div className="flex items-center gap-x-2 py-10">
-                      <Image src={hourglass} alt="" className="w-24 h-24" />
+                      <Image
+                        src={hourglass}
+                        alt=""
+                        className="w-24 h-24 transition-transform hover:scale-105 duration-300"
+                      />
                       <div className=" space-y-2">
                         <div className="flex items-center gap-x-1">
                           <h4 className="font-sans italic text-lg font-semibold hover:border-b-2 hover:border-[#230b59]">
@@ -104,13 +125,7 @@ const NavBar = () => {
                       </div>
                     </div>
                   </div>
-                  {/* <div className="w-4/12 bg-[#f3f4f6] h-full">
-                    {menuData.map(({ id, title }) => (
-                      <ul key={id} className="my-2">
-                        <li>{title}</li>
-                      </ul>
-                    ))}
-                  </div> */}
+                
                 </div>
               </Menu.Item>
             </Menu.Dropdown>
@@ -119,9 +134,36 @@ const NavBar = () => {
           <Link href="!#" onClick={handleClick}>
             Stocks
           </Link>
-          <Link href="!#" onClick={handleClick}>
-            Learn
-          </Link>
+          <Menu
+            trigger="hover"
+            openDelay={100}
+            closeDelay={400}
+            shadow="md"
+            width={240}
+            arrowPosition="center"
+            withArrow
+          >
+            <Menu.Target>
+              <Link href="!#" onClick={handleClick} className="hover:border-b-2 hover:border-[#230b59]">
+                Learn
+              </Link>
+            </Menu.Target>
+
+            <Menu.Dropdown>
+              <Menu.Item>
+                <div className="flex items-center justify-center py-4">
+                  <div className="w-full space-y-6">
+                    {learnData.map(({ id, icon, title }) => (
+                      <div className="flex items-center gap-x-2" key={id}>
+                        <div className="text-[#230b59]">{icon}</div>
+                        <p>{title}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </Menu.Item>
+            </Menu.Dropdown>
+          </Menu>
         </div>
         <div className="md:flex items-center gap-x-4 hidden">
           <Button className="border border-[#230b59] text-[#230b59] py-2 rounded-md px-4">

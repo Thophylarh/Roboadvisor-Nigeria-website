@@ -56,9 +56,9 @@ const SmarterInvestment = (props: Props) => {
     <div className="md:py-6 py-10">
       <div className="md:flex sm:block items-center gap-x-8 ">
         <div className="bg-[#230b59] text-white md:w-8/12 h-auto w-full  animate__animated animate__fadeInLeft relative">
-          <div className="p-4 bg-white md:w-[420px] w-[300px] rounded-md mx-4 px-2 -top-12 md:left-[25%] left-[10%] absolute ">
+          <div className="p-3 bg-white md:w-[420px] w-[300px] rounded-md mx-4 px-2 -top-12 md:left-[25%] left-[10%] absolute ">
             <div className="flex items-center justify-between my-2">
-              <h5 className="font-semibold md:text-xl text-base ">
+              <h5 className="font-semibold md:text-lg text-base ">
                 Risk score:{value}
               </h5>
               <p className="md:text-sm text-xs">Example portfolio</p>
